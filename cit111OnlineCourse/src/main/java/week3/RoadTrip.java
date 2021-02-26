@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author  Eric Darsow / Anca Foia
+ * @CCAC CIT-111-Z03
+ * Code copied from the Github repo
  */
 package week3;
 
 
-/**
- * Simulates basic recorded data about a road trip to Moab, Utah
- * @author Eric Darsow / Anca Foia
- */
 public class RoadTrip {
     @SuppressWarnings("UnusedAssignment")
     public static void main(String[] args){
