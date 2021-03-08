@@ -2,6 +2,11 @@
  * @author Anca Foia
  * @CCAC CIT-111-Z03
  */
+
+//------------------------------------
+// FLOWCHART LINK: https://github.com/ancafoia/CIT-111/blob/main/cit111OnlineCourse/src/main/java/week5/MathChecker_flowchart.PNG
+// ------------------------------------------
+
 package week5;
 
 import java.util.Scanner;
