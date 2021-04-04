@@ -3,6 +3,15 @@
  * @CCAC CIT-111-Z03
  * 
  * Unit converter mini project
+ * 
+    Conversion table
+    
+    Celsius (C) into Fahrenheit (F): F=9/5(C) +32
+    Celsius (C) into Kelvin (k): K = C+273
+    Fahrenheit (F) into Celsius (C): C= 5/9(F-32)
+    Fahrenheit (F) into Kelvin (K): K= 5/9(F-32) +273
+    Kelvin (K) into Celsius (C): C=K-273
+    Kelvin (K) into Fahrenheit (F): F= 9/5(K-273) +32
  */
 package week8;
 
@@ -29,17 +38,7 @@ public class UnitConverter {
         return c;
     }
     
-    /*
-    Conversion table
-    
-    Celsius (C) into Fahrenheit (F): F=9/5(C) +32
-    Celsius (C) into Kelvin (k): K = C+273
-    Fahrenheit (F) into Celsius (C): C= 5/9(F-32)
-    Fahrenheit (F) into Kelvin (K): K= 5/9(F-32) +273
-    Kelvin (K) into Celsius (C): C=K-273
-    Kelvin (K) into Fahrenheit (F): F= 9/5(K-273) +32
-    */
-    
+
     /**
      * convert Celsius to Fahrenheit, Celsius or Kelvin
      * @param value the value to be converted
@@ -47,17 +46,17 @@ public class UnitConverter {
      * @return the conversion result
      */
     public static double convertCtoX(double value, char toUnit) throws Exception {
-        if (toUnit == 'F') { // to F
-            return 9/5 * value + 32;
-        }
-        if (toUnit == 'C') { // to C
-            return value;
-        }
-        if (toUnit == 'K') { // to K
-            return value + KelvinConstant;
+        switch (toUnit) {
+            case 'F':
+                return 9/5 * value + 32;
+            case 'C':
+                return value;
+            case 'K':
+                return value + KelvinConstant;
+            default:
+                throw new Exception("Invalid unit. unit must be 1, 2 or 3");
         }
         
-        throw new Exception("Invalid unit. unit must be 1, 2 or 3");
     }
     
     /**
@@ -67,17 +66,18 @@ public class UnitConverter {
      * @return the conversion result
      */
     public static double convertFtoX(double value, char toUnit) throws Exception {
-        if (toUnit == 'F') { // to F
-            return value;
-        }
-        if (toUnit == 'C') { // to C
-            return 5 / 9 * (value - 32);
-        }
-        if (toUnit == 'K') { // to K
-            return 5 / 9 * (value - 32) + KelvinConstant;
+        switch (toUnit) {
+            case 'F':
+                return value;
+            case 'C':
+                return 5 / 9 * (value - 32);
+            case 'K':
+                return 5 / 9 * (value - 32) + KelvinConstant;
+        
+            default:
+                throw new Exception("Invalid unit. unit must be 1, 2 or 3");
         }
         
-        throw new Exception("Invalid unit. unit must be 1, 2 or 3");
     }
    
     /**
@@ -86,17 +86,17 @@ public class UnitConverter {
      * @param toUnit the unit to convert to
      * @return the conversion result
      */    public static double convertKtoX(double value, int toUnit) throws Exception {
-        if (toUnit == 'F') { // to F
-            return 9 / 5 * (value - KelvinConstant) + 32;
-        }
-        if (toUnit == 'C') { // to C
-            return value - KelvinConstant;
-        }
-        if (toUnit == 'K') { // to K
-            return value;
+        switch (toUnit) {
+            case 'F':
+                return 9 / 5 * (value - KelvinConstant) + 32;
+            case 'C':
+                return value - KelvinConstant;
+            case 'K':
+                return value;
+            default:
+                throw new Exception("Invalid unit. unit must be 1, 2 or 3");
         }
         
-        throw new Exception("Invalid unit. unit must be 1, 2 or 3");
     }
     
         
