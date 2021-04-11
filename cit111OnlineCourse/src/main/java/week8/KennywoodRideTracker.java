@@ -93,6 +93,12 @@ public class KennywoodRideTracker {
         System.out.println("*******RIDER STATS*********");
         System.out.println("Total Riders Black Widow: " + totalRidersBlackWidow);
         System.out.println("Total Riders Merry-Go-Round: " + totalRidersMerryGoRound);
+
+        if (totalRiders > 0) {
+            System.out.println("Percentage in Black Widow: " + (1.0 * totalRidersBlackWidow * 100 / totalRiders));
+            System.out.println("Percentage in Merry-Go-Round: " + (1.0 * totalRidersMerryGoRound * 100 / totalRiders));
+        }
+        
         System.out.println("Total Riders: " + totalRiders);
         System.out.println("Total Failed Ride Attempts: " + totalFailedRideAttempts);
         System.out.println("Total sick riders: " + totalSickRiders);
