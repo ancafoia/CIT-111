@@ -13,10 +13,11 @@
     Kelvin (K) into Celsius (C): C=K-273
     Kelvin (K) into Fahrenheit (F): F= 9/5(K-273) +32
  */
-package week8;
 
 import java.io.IOException;
 import java.util.Scanner;
+
+package week8;
 
 public class UnitConverter {
     
