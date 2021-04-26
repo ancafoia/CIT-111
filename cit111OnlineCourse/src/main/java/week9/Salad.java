@@ -1,5 +1,12 @@
 package week9;
 
+/**
+ * @author Anca Foia
+ * @CCAC CIT-111-Z03
+ * 
+ * Food land
+ */
+
 public class Salad {
   public String name = "A salad";
   public int percRemaining = 100;

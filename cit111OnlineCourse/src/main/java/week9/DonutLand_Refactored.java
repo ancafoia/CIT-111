@@ -1,6 +1,11 @@
 package week9;
 
-import javax.print.event.PrintJobAdapter;
+/**
+ * @author Anca Foia
+ * @CCAC CIT-111-Z03
+ * 
+ * Food land
+ */
 
 public class DonutLand_Refactored {
   final static int nibble = 5;
