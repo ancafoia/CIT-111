@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package components.comp3_objects.oop4_btfcars;
 
 /**
  * Model of a car inspired by Back To The Future 1's 8 car types!
@@ -25,43 +24,43 @@ public class Car {
     // to change these values
     public int year;
     public String makeModel;
-    
+
     // private member variables because we want to control 
     // their values: outside classes access these through methods
     private boolean isEngineRunning;
     private double speed;
     private int gear = 0; //-1 = reverse, 0 = neutral
-    
+
     /**
      * simulates starting this car instance's engine
      */
-    public void startEngine(){
+    public void startEngine() {
         isEngineRunning = true;
         System.out.println("...crank...crank...vroom!");
     }
-    
+
     /**
      * Simulates stopping this car instance's engine
      */
-    public void stopEngine(){
+    public void stopEngine() {
         isEngineRunning = false;
         System.out.println("...grblllll....shldunk");
     }
-    
+
     /**
      * Allows access to our private engine status boolean member 
      * variable called isEngineRunning
      * @return the status of the engine: true means on, false means off
      */
-    public boolean checkEngineStatus(){
+    public boolean checkEngineStatus() {
         return isEngineRunning;
     }
-    
+
     /**
      * Allows access to our private speed variable
      * @return this car object's current speed
      */
-    public double getCurrentSpeed(){
+    public double getCurrentSpeed() {
         return speed;
     }
 
@@ -72,17 +71,18 @@ public class Car {
     public int getCurrentGear() {
         return gear;
     }
-    
+
     /**
      * Controls the car's increases in speed
      * @param mphIncrease 
      * @return the current speed of the car after the acceleration
      * has been taken into account
      */
-    public double accelerate(int mphIncrease){
+    public double accelerate(int mphIncrease) {
         speed = speed + mphIncrease;
         return speed;
     }
+
     /**
      * Controls the car's decreases in speed
      * @param mphDecrease
@@ -93,7 +93,7 @@ public class Car {
         if (speed < 0) {
             System.out.println("Warning: decelerate speed value is bigger than current speed.");
             System.out.println("Setting speed to 0.");
-            speed  = 0;
+            speed = 0;
         }
         return speed;
     }
@@ -130,5 +130,5 @@ public class Car {
         gear = tempGear;
 
     }
-    
+
 }
